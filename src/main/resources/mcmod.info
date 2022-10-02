@@ -1,0 +1,16 @@
+[
+    {
+        "modid": "qeetility",
+        "name": "Qeetility",
+        "description": "description text",
+        "version": "${version}",
+        "mcversion": "${mcversion}",
+        "url": "https://twitter.com/toumari_hikana",
+        "updateUrl": "https://github.com/toumarihikana/Qeetility",
+        "authorList": ["toumarihikana"],
+        "credits": "",
+        "logoFile": "",
+        "screenshots": [],
+        "dependencies": ["mod_MinecraftForge"]
+    }
+]
