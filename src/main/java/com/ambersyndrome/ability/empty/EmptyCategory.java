@@ -5,11 +5,11 @@ import cn.academy.ability.Skill;
 import cn.academy.ability.vanilla.VanillaCategories;
 import com.ambersyndrome.ability.empty.skill.EmptyFirstSkill;
 
-public class emptyCategory extends Category {
+public class EmptyCategory extends Category {
 
 public static final Skill emp1 = EmptyFirstSkill.instance;
-    public emptyCategory() {
-        super("empty");
+    public EmptyCategory() {
+        super("zempty");
 
 
         setColorStyle(20, 113, 208, 100);

@@ -1,8 +1,7 @@
 package com.ambersyndrome.qeetility;
 
-import cn.academy.ability.CategoryManager;
 import cn.academy.ability.RegCategory;
-import com.ambersyndrome.ability.empty.emptyCategory;
+import com.ambersyndrome.ability.empty.EmptyCategory;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -137,5 +136,5 @@ public class Qeetility {
 
 
     @RegCategory
-    public static final emptyCategory _emptyCategory = new emptyCategory();
+    public static final EmptyCategory emptyCategory = new EmptyCategory();
 }

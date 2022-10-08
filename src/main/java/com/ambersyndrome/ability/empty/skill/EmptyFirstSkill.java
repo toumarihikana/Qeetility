@@ -46,7 +46,7 @@ public class EmptyFirstSkill extends Skill {
 
     @Override
     public void activate(ClientRuntime rt, int keyID) {
-        activateSingleKey2(rt, keyID, ElectronBomb.Ctx::new);
+        activateSingleKey2(rt, keyID, EmptyFirstContext::new);
     }
 
 
@@ -80,7 +80,6 @@ public class EmptyFirstSkill extends Skill {
         private void l_keydown()
         {
 
-            player.world.spawnEntity(new EntityEgg(player.world));
             sendToServer(MSG_PERFORM);
         }
 
@@ -88,7 +87,6 @@ public class EmptyFirstSkill extends Skill {
         private void s_perform(){
 
 
-            player.world.spawnEntity(new EntityBlock(player.world));
             if(consume()) {
                 World world = player.world;
                 // Perform ray trace
@@ -179,10 +177,10 @@ public class EmptyFirstSkill extends Skill {
             arc.length = range;
 
             player.world.spawnEntity(arc);
-            player.world.spawnParticle(EnumParticleTypes.EXPLOSION_NORMAL,
-                    player.posX,
-                    player.posY,
-                    player.posZ, 5.0, 3.0, 3.0, 3, 1);
+            player.world.spawnParticle(EnumParticleTypes.EXPLOSION_LARGE,
+                    player.posX + 1,
+                    player.posY + 1,
+                    player.posZ + 1, 5.0, 3.0, 3.0, 3, 1);
 
             ACSounds.playClient(player, "em.arc_weak", SoundCategory.AMBIENT, 0.5f);
         }
