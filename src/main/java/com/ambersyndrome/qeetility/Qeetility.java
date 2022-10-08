@@ -1,8 +1,10 @@
 package com.ambersyndrome.qeetility;
 
+import cn.academy.ability.CategoryManager;
+import cn.academy.ability.RegCategory;
+import com.ambersyndrome.ability.empty.emptyCategory;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -16,7 +18,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
-import net.minecraftforge.registries.IForgeRegistryEntry;
 //import com.ambersyndrome.qeetility.exsample;
 
 @Mod(
@@ -51,6 +52,7 @@ public class Qeetility {
      */
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+//        CategoryManager.INSTANCE.register(_emptyCategory);
 
     }
 
@@ -132,4 +134,8 @@ public class Qeetility {
 
     }
     */
+
+
+    @RegCategory
+    public static final emptyCategory _emptyCategory = new emptyCategory();
 }

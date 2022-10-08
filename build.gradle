@@ -134,10 +134,10 @@ sourceSets {
     }
 }
 
-copy {
-    delete {
-        delete "$buildDir/classes/scala/main"
-    }
-    into "$buildDir/classes/scala/main"
-    from sourceSets.main.resources
-}
+//copy {
+//    delete {
+//        delete "$buildDir/classes/scala/main"
+//    }
+//    into "$buildDir/classes/scala/main"
+//    from sourceSets.main.resources
+//}

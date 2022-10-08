@@ -16,13 +16,12 @@ class LoginMessage(){
   def onPlayerLoggedIn(event: PlayerEvent.PlayerLoggedInEvent): Unit = {
     val player = event.player
     val pos = player.getPosition
-    val classpath = Thread.currentThread.getContextClassLoader.getResource("").getPath
-    System.out.println("classpath : " + classpath)
+//    val classpath = Thread.currentThread.getContextClassLoader.getResource("").getPath
+//    System.out.println("classpath : " + classpath)
     val message = s"""
                      |Hello, World
                      |name = [${player.getName}]
                      |pos  = [${pos.getX}. ${pos.getY}, pos.getZ]
-                     |mes  = [${classpath}]
     """.stripMargin
     player.sendMessage(new TextComponentString(message))
 //    , player.getUniqueID)
